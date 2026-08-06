@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started — LeadTapAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><div class="logo"><span class="dot"></span>LeadTap<span style="color:var(--copper-light)">AI</span></div></a>
+    <nav class="nav-links">
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding: 64px 0 96px;">
+
+  <div class="section-head" style="margin-bottom:40px;">
+    <div class="section-eyebrow">Get started</div>
+    <h1 style="font-size:clamp(28px,3.4vw,38px); margin-bottom:12px;">Tell us about your business</h1>
+    <p style="color:var(--slate-light); font-size:15.5px;">Takes about 5 minutes. We'll be in touch to get you set up.</p>
+  </div>
+
+  <form id="onboarding-form" class="onboard-form">
+
+    <div class="form-notice">
+      To use LeadTapAI, you'll need a dedicated business number. This keeps your personal messages completely separate from your Agent.
+    </div>
+
+    <div class="form-block">
+      <div class="form-block-head">Business details</div>
+
+      <div class="field">
+        <label for="business_name">Business name <span class="req">*</span></label>
+        <input type="text" id="business_name" name="business_name" required>
+      </div>
+
+      <div class="field">
+        <label for="your_name">Your name <span class="req">*</span></label>
+        <input type="text" id="your_name" name="your_name" required>
+      </div>
+
+      <div class="field">
+        <label for="areas_covered">What areas do you cover? <span class="req">*</span></label>
+        <div class="field-hint">E.g. Nottingham, Derby, Mansfield</div>
+        <textarea id="areas_covered" name="areas_covered" rows="2" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="working_hours">What are your working hours? <span class="req">*</span></label>
+        <div class="field-hint">E.g. Mon-Fri 8am-6pm, Sat 9am-1pm</div>
+        <input type="text" id="working_hours" name="working_hours" required>
+      </div>
+
+      <div class="field">
+        <label>Do you offer emergency callouts? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="emergency_callouts" value="Yes" required> Yes</label>
+          <label class="radio-option"><input type="radio" name="emergency_callouts" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="business_number">Your business number <span class="req">*</span></label>
+        <div class="field-hint">This number will be receiving captured leads</div>
+        <div class="field-hint" style="color:var(--copper-light);">Must be a dedicated number, separate from your personal phone — see note above.</div>
+        <input type="tel" id="business_number" name="business_number" required>
+      </div>
+
+      <div class="field">
+        <label for="services_offered">What services do you offer? <span class="req">*</span></label>
+        <div class="field-hint">If you do everything plumbing related please type: All</div>
+        <textarea id="services_offered" name="services_offered" rows="3" required></textarea>
+      </div>
+
+      <div class="field">
+        <label for="services_excluded">Any services you don't offer? <span class="req">*</span></label>
+        <div class="field-hint">E.g. No gas work, no commercial jobs</div>
+        <textarea id="services_excluded" name="services_excluded" rows="3" required></textarea>
+      </div>
+    </div>
+
+    <div class="form-block">
+      <div class="form-block-head">Blacklist numbers</div>
+
+      <div class="field">
+        <label for="blacklist_numbers">Are there any numbers you'd like the Agent to ignore?</label>
+        <div class="field-hint">Enter one number per line. Include suppliers, colleagues, family etc. You can update this anytime. Any number that's not listed will be treated as a lead.</div>
+        <textarea id="blacklist_numbers" name="blacklist_numbers" rows="4"></textarea>
+      </div>
+    </div>
+
+    <div class="form-block">
+      <div class="form-block-head">Business information</div>
+      <div class="form-block-sub">This will help us understand your services better.</div>
+
+      <div class="field">
+        <label>Do you have a business website?</label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="has_website" value="Yes"> Yes</label>
+          <label class="radio-option"><input type="radio" name="has_website" value="No"> No</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="website_url">If yes, what's your website URL?</label>
+        <input type="text" id="website_url" name="website_url">
+      </div>
+
+      <div class="field">
+        <label for="contact_phone">Phone <span class="req">*</span></label>
+        <div class="field-hint">The number we'll contact you on</div>
+        <input type="tel" id="contact_phone" name="contact_phone" required>
+      </div>
+
+      <div class="field">
+        <label>Is this number used for business only? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-option"><input type="radio" name="number_business_only" value="Yes, business only" required> Yes, business only</label>
+          <label class="radio-option"><input type="radio" name="number_business_only" value="No, I also use it personally"> No, I also use it personally</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+    </div>
+
+    <div class="form-block">
+      <div class="form-block-head">Agreements</div>
+
+      <div class="field checkbox-field">
+        <label class="checkbox-option">
+          <input type="checkbox" name="agree_trial" value="Agreed" required>
+          <span>I agree to the 30-day free trial terms and confirm this number is being used for a legitimate business. I understand that LeadTapAI communicates via SMS only — WhatsApp is not currently supported (full terms: <a href="terms.html" target="_blank">leadtapai.co.uk/terms.html</a>).</span>
+        </label>
+      </div>
+
+      <div class="field checkbox-field">
+        <label class="checkbox-option">
+          <input type="checkbox" name="agree_authorization" value="Agreed" required>
+          <span>I confirm I have the right to authorize LeadTapAI to send SMS messages and make/receive calls to my leads and customers on my behalf, as described in Section 5.2 of the Terms of Service (read it here: <a href="terms.html" target="_blank">leadtapai.co.uk/terms.html</a>).</span>
+        </label>
+      </div>
+
+      <div class="field checkbox-field">
+        <label class="checkbox-option">
+          <input type="checkbox" name="agree_terms" value="Agreed" required>
+          <span>I confirm I have read and agree to LeadTapAI's Terms of Service in full (read it here: <a href="terms.html" target="_blank">leadtapai.co.uk/terms.html</a>).</span>
+        </label>
+      </div>
+
+      <div class="field checkbox-field">
+        <label class="checkbox-option">
+          <input type="checkbox" name="agree_privacy" value="Agreed" required>
+          <span>I confirm I have read and agree to LeadTapAI's Privacy Policy (read it here: <a href="privacy.html" target="_blank">leadtapai.co.uk/privacy.html</a>).</span>
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-primary" style="width:100%; margin-top:8px;">Submit</button>
+
+  </form>
+
+  <div id="form-success" class="form-success" style="display:none;">
+    <h2 style="font-size:24px; margin-bottom:12px;">Thank you for your submission</h2>
+    <p style="color:var(--slate-light);">Your agent will be set up within 1-2 business days. Look out for our confirmation email.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <div class="logo" style="font-size:15px;"><span class="dot"></span>LeadTap<span style="color:var(--copper-light)">AI</span></div>
+    <div class="footer-links">
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-meta">© 2026 LeadTapAI. Built for UK tradespeople.</div>
+  </div>
+</footer>
+
+<script>
+  // ===== REPLACE THESE TWO THINGS BEFORE THIS FORM WILL WORK =====
+  const GOOGLE_FORM_ACTION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdP2Lq6ue6b2TwauKZ5I-K_fqht_Y_jpTmqBCvbW9W-ChK2dQ/formResponse";
+
+  const ENTRY_IDS = {
+    business_name: "152077756",
+    your_name: "174951416",
+    areas_covered: "1964489246",
+    working_hours: "1958864310",
+    emergency_callouts: "1468398644",
+    business_number: "1793989876",
+    services_offered: "88450544",
+    services_excluded: "953579758",
+    blacklist_numbers: "2097833775",
+    has_website: "1663312336",
+    website_url: "94756331",
+    contact_phone: "221333930",
+    number_business_only: "1918360598",
+    email: "1726716789",
+    agree_trial: "1734689573",
+    agree_authorization: "1295086410",
+    agree_terms: "2060469773",
+    agree_privacy: "861125716"
+  };
+  // =================================================================
+
+  const form = document.getElementById('onboarding-form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+
+    const SENTINEL_ENTRY_IDS = [
+      "1468398644", 
+      "1663312336", 
+      "1918360598", 
+      "1734689573", 
+      "1295086410", 
+      "2060469773", 
+      "861125716"   
+    ];
+
+    const data = new FormData();
+    for (const [fieldName, entryId] of Object.entries(ENTRY_IDS)) {
+      const el = form.elements[fieldName];
+      if (!el) continue;
+
+      if (el instanceof RadioNodeList) {
+        const checked = form.querySelector(`[name="${fieldName}"]:checked`);
+        if (checked) data.append(`entry.${entryId}`, checked.value);
+      } else if (el.type === 'checkbox') {
+        if (el.checked) data.append(`entry.${entryId}`, el.value);
+      } else {
+        data.append(`entry.${entryId}`, el.value);
+      }
+    }
+
+    
+    for (const entryId of SENTINEL_ENTRY_IDS) {
+      data.append(`entry.${entryId}_sentinel`, "");
+    }
+
+    fetch(GOOGLE_FORM_ACTION_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: data
+    }).then(function () {
+      form.style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }).catch(function () {
+      alert('Something went wrong submitting the form. Please try again or contact us directly.');
+    });
+  });
+</script>
+
+</body>
+</html>
